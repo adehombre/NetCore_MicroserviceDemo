@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>3fbd933d-a1a6-4931-beef-bceb0665849d</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>obj\Debug\netcoreapp3.1\CustomerAPI.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="FluentValidation" Version="9.5.1" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomerAPI.Domain\CustomerAPI.Domain.csproj" />
+    <ProjectReference Include="..\CustomerAPI.Messaging.Send\CustomerAPI.Messaging.Send.csproj" />
+    <ProjectReference Include="..\CustomerAPI.Service\CustomerAPI.Service.csproj" />
+  </ItemGroup>
+
+
+</Project>
