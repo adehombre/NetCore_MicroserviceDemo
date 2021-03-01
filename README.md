@@ -11,7 +11,7 @@ I recommend setting the database connection string in `appsetting.json` and read
 ```services.AddDbContext<CustomerContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));```
 
 ## Messaging
-I have used RabbitMQ as message broker for sending messages among microservices. You must [install RabbitMQ](https://www.rabbitmq.com/download.html) and I recommend use [Management Plugin](https://www.rabbitmq.com/management.html) since it provides an HTTP API for management and monitoring RabbitMQ nodes.
+I have used RabbitMQ as message broker for sending messages among microservices. You must [install RabbitMQ](https://www.rabbitmq.com/download.html) and I recommend use [Management Plugin](https://www.rabbitmq.com/management.html) since it provides an HTTP API for management and monitoring RabbitMQ nodes. Modify `HostName` , `UserName` and `Password` of the **RabbitMq** section in `appsettings.json`. 
 
 ## How test Microservices
 I have used [Swagger](https://swagger.io/solutions/api-documentation/) to document and test the microservices and make this information easily accessible even for none technical people. For microservices testing, you need to start them. This should display the Swagger GUI which gives you information about all endpoints, models and also lets you send requests.
